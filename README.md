@@ -3,22 +3,30 @@
 [![Build status](https://api.travis-ci.org/PGBI/cakephp3-soft-delete.png?branch=master)](https://travis-ci.org/PGBI/cakephp3-soft-delete)
 
 ## Purpose
+Update to the original inactive repo for deprecated functions that came with newer CakePHP versions.
 
 This Cakephp plugin enables you to make your models soft deletable.
 When soft deleting an entity, it is not actually removed from your database. Instead, a `deleted` timestamp is set on the record.
 
 ## Requirements
 
-This plugins has been developed for cakephp 3.x.
+This plugins has been developed for CakePHP 3.6.x and above
 
 ## Installation
 
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
 
-Update your composer file to include this plugin:
-
+Update your composer file to include this plugin and overriding vcs entry in repository with updated version:
+```//in composer.json
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/borantula/cakephp3-soft-delete"
+        }
+    ],
 ```
-composer require pgbi/cakephp3-soft-delete "~1.0"
+```
+composer require pgbi/cakephp3-soft-delete "dev-master"
 ```
 
 ## Configuration
